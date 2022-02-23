@@ -1,0 +1,68 @@
+add floor -name=Prizemi
+add floor -name=1.patro
+add floor -name=2.patro
+
+add room -name=Kuchyne -fId=0
+add room -name=Pracovna -fId=0
+add room -name=Garaz -fId=0
+add room -name=Zahrada -fId=0
+add room -name=Zachod -fId=0
+add room -name=Koupelna -fId=0
+add room -name=Loznice -fId=1
+add room -name=Zachod -fId=1
+add room -name=Koupelna -fId=1
+add room -name=Domaci_kino -fId=2
+add room -name=Zachod -fId=2
+add room -name=Koupelna -fId=2
+add room -name=Loznice2 -fId=2
+
+add device -rId=0 -type=WINDOW -ci=5 -cp=5 -cu=6
+add device -rId=0 -type=WASHING_MACHINE -ci=5 -cp=5 -cu=6
+add device -rId=0 -type=DOOR -ci=1 -cp=2 -cu=1.5
+add device -rId=0 -type=DOOR -ci=1 -cp=2 -cu=1.5
+add device -rId=1 -type=WINDOW -ci=0 -cp=1 -cu=0.5
+add device -rId=1 -type=DOOR -ci=1 -cp=2 -cu=1.5
+add device -rId=2 -type=GARDEN_SPRINKLER -ci=5 -cp=5 -cu=6
+add device -rId=2 -type=WEATHER_STATION -ci=5 -cp=5 -cu=6
+add device -rId=3 -type=SMART_PHONE -ci=2 -cp=5 -cu=3
+add device -rId=3 -type=DOOR -ci=1 -cp=2 -cu=1.5
+add device -rId=0 -type=KETTLE -ci=1 -cp=10 -cu=7
+add device -rId=4 -type=WASHING_MACHINE -ci=5 -cp=5 -cu=6
+add device -rId=4 -type=WINDOW -ci=0 -cp=1 -cu=0.5
+add device -rId=5 -type=WINDOW -ci=0 -cp=1 -cu=0.5
+add device -rId=6 -type=WINDOW -ci=0 -cp=1 -cu=0.5
+add device -rId=8 -type=ELECTRIC_TOOTHBRUSH -ci=1 -cp=2 -cu=1
+add device -rId=8 -type=ELECTRIC_TOOTHBRUSH -ci=1 -cp=2 -cu=1
+add device -rId=11 -type=ELECTRIC_TOOTHBRUSH -ci=1 -cp=2 -cu=1
+add device -rId=11 -type=ELECTRIC_TOOTHBRUSH -ci=1 -cp=2 -cu=1
+add device -rId=12 -type=SMART_PHONE -ci=2 -cp=5 -cu=3
+add device -rId=3 -type=DOOR -ci=5 -cp=5 -cu=6
+
+add livingBeing -rId=2 -type=DOG -name=Flicek
+add livingBeing -rId=7 -type=CAT -name=Nufinka
+add livingBeing -rId=1 -type=CAT -name=Kockodlak
+add livingBeing -rId=4 -type=CAT -name=Cipisek
+add livingBeing -rId=1 -type=CAT -name=Dlakoc
+add livingBeing -rId=3 -type=CAT -name=Drakoc
+add livingBeing -rId=7 -type=HUMAN -name=Franta
+add livingBeing -rId=5 -type=HUMAN -name=Ondra
+add livingBeing -rId=1 -type=HUMAN -name=Sasa
+add livingBeing -rId=8 -type=HUMAN -name=Zdenda
+add livingBeing -rId=3 -type=HUMAN -name=Honza_Zidek
+add livingBeing -rId=2 -type=HUMAN -name=Tomda_Palivcu
+add livingBeing -rId=2 -type=HUMAN -name=Hugic_Mrazku
+
+add item -rId=2 -type=SKI
+add item -rId=2 -type=BICYCLE
+add item -rId=2 -type=BICYCLE
+
+run -n=10000
+
+export -path=export.json -config
+export -path=export_log.json -log
+export -path=export_consumption.json -consumption
+export -path=export_message.json -message
+
+import -path=export.json
+
+

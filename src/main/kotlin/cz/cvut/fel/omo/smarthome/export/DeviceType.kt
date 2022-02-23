@@ -1,0 +1,12 @@
+package cz.cvut.fel.omo.smarthome.export
+
+enum class DeviceType (val value: String) {
+    WINDOW("WINDOW"),
+    DOOR("DOOR"),
+    SMART_PHONE("SMART_PHONE"),
+    GARDEN_SPRINKLER("GARDEN_SPRINKLER"),
+    WASHING_MACHINE("WASHING_MACHINE"),
+    WEATHER_STATION("WEATHER_STATION"),
+    ELECTRIC_TOOTHBRUSH("ELECTRIC_TOOTHBRUSH"),
+    KETTLE("KETTLE")
+}
